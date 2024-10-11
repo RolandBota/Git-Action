@@ -1,13 +1,31 @@
 name: meimErsterWorkflow
 
-on: push
+on:
+  push:
+  pull_request:
 
 jobs:
-  meinEsterJob:
-   runs-on: ubuntu-latest
-   steps:
-    - name: meinErsterStep
-      run: echo "Hallo Weld!"
+  changed-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: meinErsterStep
+        run: echo "Hallo Welt!"
+      - name: Abschied
+        run: echo "Bye Bye!"
+
+      
+
+
+#name: meimErsterWorkflow
+
+#on: push
+
+#jobs:
+ # meinEsterJob:
+  # runs-on: ubuntu-latest
+   #steps:
+    #- name: meinErsterStep
+     # run: echo "Hallo Weld!"
       
 
 
